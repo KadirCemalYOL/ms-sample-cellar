@@ -3,6 +3,7 @@ package com.kcy.mssamplecellar.web.controller;
 import com.kcy.mssamplecellar.web.model.ItemDto;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.UUID;
@@ -17,13 +18,13 @@ public class ItemController {
     }
 
     @PostMapping
-    public ResponseEntity<ItemDto> saveNewItem(@RequestBody ItemDto itemDTO) {
+    public ResponseEntity<ItemDto> saveNewItem(@RequestBody @Validated ItemDto itemDTO) {
         //TODO Implement
         return new ResponseEntity<>(HttpStatus.CREATED);
     }
 
     @PutMapping("/{itemId}")
-    public ResponseEntity<ItemDto> updateItem(@PathVariable UUID itemId, @RequestBody ItemDto itemDTO) {
+    public ResponseEntity<ItemDto> updateItem(@PathVariable UUID itemId, @RequestBody @Validated ItemDto itemDTO) {
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 }

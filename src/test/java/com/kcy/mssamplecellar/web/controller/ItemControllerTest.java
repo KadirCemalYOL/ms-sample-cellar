@@ -1,6 +1,5 @@
 package com.kcy.mssamplecellar.web.controller;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.kcy.mssamplecellar.web.model.ItemDto;
 import org.junit.jupiter.api.Test;
